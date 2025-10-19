@@ -59,3 +59,19 @@ Password changed for admin
 ```
 
 Now open your browser to https://localhost:8834
+
+
+## Other
+
+### 更新 错误
+
+sudo docker exec nessus sed -i 's|wget (https://plugins.nessus.org[^ ]*)|wget "\1"|' /nessus/update.sh
+
+或
+
+docker exec -it nessus /bin/bash /nessus/update.sh "https://plugins.nessus.org/v2/nessus.php?f=all-2.0.tar.gz&u=xxxxxxxxxxxxxxxxxxxxxxxx&p=xxxxxxxxxxxxxxxxxxx"
+
+
+
+
+
